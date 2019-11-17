@@ -38,7 +38,7 @@ public class TrooperDao extends AbstractDao<Trooper> {
 
 
     public long insert(Trooper Trooper) throws SQLException {
-        long id = insert(Trooper, "insert into Troopers (name,email,role) values (?,?)");
+        long id = insert(Trooper, "insert into Troopers (name,email,role) values (?,?,?)");
         Trooper.setId(id);
         return id;
     }

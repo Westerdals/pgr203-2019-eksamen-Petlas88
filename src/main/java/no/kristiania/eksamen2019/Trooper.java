@@ -49,9 +49,10 @@ public class Trooper {
 
     }
 
-    public Trooper(String name, String email) {
+    public Trooper(String name, String email, String role) {
         this.name = name;
         this.email = email;
+        this.role = role;
 
     }
 
@@ -69,7 +70,7 @@ public class Trooper {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email);
+        return Objects.hash(id, name, email, role);
     }
 
     @Override
