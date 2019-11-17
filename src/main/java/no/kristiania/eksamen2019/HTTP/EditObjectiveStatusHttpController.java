@@ -35,7 +35,7 @@ public class EditObjectiveStatusHttpController implements HttpController {
                 objectiveDao.insert(objective);
 
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +
-                        "Location: http://localhost:8080\r\n" +
+                        "Location: http://localhost:8080/editObjectiveStatus\r\n" +
                         "Connection: close\r\n" +
                         "\r\n").getBytes());
                 return;
@@ -55,15 +55,16 @@ public class EditObjectiveStatusHttpController implements HttpController {
         } catch (SQLException e) {
             Logger.error("While handling request{}", requestPath, e);
             String message = e.toString();
-            outputStream.write(("HTTP/1.0 500 Internal server error\r\n" +
+            outputStream.write(("HTTP/1.1 500 Internal server error\r\n" +
                     "Content-length: " + message.length() + "\r\n" +
                     "\r\n" +
                     message).getBytes());
         }
     }
+
     public String getBody() throws SQLException {
         return objectiveDao.listAll().stream()
-                .map(p -> String.format("<option value='%s'>%s</option>", p.getName(), p.getName()))
+                .map(p -> String.format("<option value='%s'>%s</option>", p.getId(), p.getName()))
                 .collect(Collectors.joining(""));
     }
     }

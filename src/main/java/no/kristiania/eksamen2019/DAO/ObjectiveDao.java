@@ -31,13 +31,6 @@ public class ObjectiveDao extends AbstractDao<Objective> {
         return operationObjective;
     }
 
-
-    public void editStatus(long statusId, long objectiveId ) throws SQLException {
-        Objective objective = new Objective();
-        insert(objective, "update objectives set status_id = " + statusId + "where id = " + objectiveId);
-
-    }
-
     public long insert(Objective operationObjective) throws SQLException{
         long id = insert(operationObjective, "insert into objectives (name,description,status) values (?,?,?)");
         operationObjective.setId((int)id);
