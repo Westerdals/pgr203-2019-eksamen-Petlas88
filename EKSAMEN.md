@@ -120,8 +120,8 @@ body {
 ## Vedlegg: Sjekkliste for innlevering
 
 * [ ] Dere har registrert link til GitHub repository i Wiseflow
-* [ ] Koden er sjekket inn på github.com/Westerdals-repository
-* [ ] GitHub repository er private, men delt med gruppen dere gjør hverandrevurdering på
+* [x] Koden er sjekket inn på github.com/Westerdals-repository
+* [x] GitHub repository er private, men delt med gruppen dere gjør hverandrevurdering på
 * [ ] Dere har mottatt minst 2 positive og 2 korrektive GitHub issues i github repository fra en annen gruppe
 * [ ] Dere har committed kode med begge prosjektdeltagernes GitHub konto (alternativt: README beskriver arbeidsform)
 
@@ -131,7 +131,7 @@ body {
 * [ ] `README.md` beskriver prosjektets funksjonalitet, hvordan man bygger det og hvordan man kjører det 
 * [ ] `README.md` beskriver eventuell ekstra leveranse utover minimum
 * [ ] `README.md` inneholder link til en diagram som viser datamodellen
-* [ ] Dere har gitt minst 2 positive og 2 korrektive GitHub issues til en annen gruppe og inkluderer link til disse fra README.md
+* [x] Dere har gitt minst 2 positive og 2 korrektive GitHub issues til en annen gruppe og inkluderer link til disse fra README.md
 
 ### Koden
 
@@ -139,15 +139,15 @@ body {
 * [ ] Koden inneholder et godt sett med tester
 * [ ] `java -jar target/...jar` (etter `mvn package`) lar bruker legge til å liste ut data fra databasen
 * [ ] Programmet leser `dataSource.url`, `dataSource.username` og `dataSource.password` fra `task-manager.properties` for å connecte til databasen
-* [ ] Programmet bruker Flywaydb for å sette opp databaseskjema
+* [x] Programmet bruker Flywaydb for å sette opp databaseskjema
 * [ ] Server skriver nyttige loggmeldinger, inkludert informasjon om hvilken URL den kjører på ved oppstart
 * [ ] `.gitignore` inneholder nødvendige filer
 
 ### Funksjonalitet
 
-* [ ] Programmet kan liste prosjektdeltagere fra databasen
-* [ ] Programmet lar bruker opprette nye prosjektdeltagere i databasen
-* [ ] Programmet kan opprette og liste prosjektoppgaver fra databasen
+* [x] Programmet kan liste prosjektdeltagere fra databasen
+* [x] Programmet lar bruker opprette nye prosjektdeltagere i databasen
+* [x] Programmet kan opprette og liste prosjektoppgaver fra databasen
 
 
 ## Vedlegg: Mulighet for ekstrapoeng
