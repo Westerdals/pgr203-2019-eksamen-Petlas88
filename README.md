@@ -65,3 +65,5 @@ Som nevnt over skulle vi ha begynt ha tidligere. Vi har underveis møtt på en d
 ## Evaluering fra annen gruppe
 
 ## Evaluering gitt til annen gruppe
+
+Lenke til issues gitt til andre gruppe:  https://github.com/Westerdals/pgr203-2019-eksamen-Lazboy87/issues
