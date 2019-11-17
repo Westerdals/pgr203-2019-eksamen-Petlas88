@@ -57,7 +57,7 @@ class TrooperTest {
     }
 
     @Test
-    void shouldSaveAllProductFields() throws SQLException {
+    void shouldSaveFromInsert() throws SQLException {
         TrooperDao dao = new TrooperDao(dataSource);
         Trooper trooper = new Trooper();
         long id = dao.insert(trooper);

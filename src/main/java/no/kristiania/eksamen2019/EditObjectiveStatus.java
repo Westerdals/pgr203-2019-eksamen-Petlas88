@@ -1,7 +1,7 @@
 package no.kristiania.eksamen2019;
 
-
 import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URLDecoder;
@@ -9,13 +9,12 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class ObjectiveHttpController implements HttpController {
+public class EditObjectiveStatus implements HttpController  {
     private ObjectiveDao objectiveDao;
     private static final org.slf4j.Logger Logger =
-            LoggerFactory.getLogger(TrooperHttpController.class);
+            LoggerFactory.getLogger(ObjectiveHttpController.class);
 
-    public ObjectiveHttpController(ObjectiveDao objectiveDao) {
-
+    public EditObjectiveStatus(ObjectiveDao objectiveDao) {
         this.objectiveDao = objectiveDao;
     }
 
@@ -26,19 +25,15 @@ public class ObjectiveHttpController implements HttpController {
             if (requestAction.equalsIgnoreCase("POST")) {
                 requestParameters = HttpServer.parseRequestParameters(requestBody);
                 Objective objective = new Objective();
-                String name = URLDecoder.decode(requestParameters.get("objectiveName"));
-                String description = URLDecoder.decode(requestParameters.get("objectiveDescription"));
-                String status = URLDecoder.decode(requestParameters.get("objectiveStatus"));
 
-                objective.setName(name);
-                objective.setDescription(description);
-                objective.setStatus(status);
+                long statusId = Long.parseLong(requestParameters.get("statusName"));
+                long objectiveId = Long.parseLong(requestParameters.get("objectiveName"));
 
 
                 objectiveDao.insert(objective);
 
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +
-                        "Location: http://localhost:8080/newTasks.html\r\n" +
+                        "Location: http://localhost:8080\r\n" +
                         "Connection: close\r\n" +
                         "\r\n").getBytes());
                 return;
@@ -63,14 +58,10 @@ public class ObjectiveHttpController implements HttpController {
                     "\r\n" +
                     message).getBytes());
         }
-
     }
-
-
-
     public String getBody() throws SQLException {
         return objectiveDao.listAll().stream()
-                .map(p -> String.format("<tr> <td>%s</td> <td>%s</td> <td>%s</td> </tr>", p.getName(), p.getDescription(), p.getStatus()))
-                .collect( Collectors.joining(""));
+                .map(p -> String.format("<option value='%s'>%s</option>", p.getId(), p.getName()))
+                .collect(Collectors.joining(""));
     }
-}
+    }
