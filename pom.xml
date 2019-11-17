@@ -40,8 +40,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.
                                 plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>no.kristiania.Dao.
-                                        ProjectMemberDao</mainClass>
+                                    <mainClass>no.kristiania.eksamen2019.ManagerServer</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
