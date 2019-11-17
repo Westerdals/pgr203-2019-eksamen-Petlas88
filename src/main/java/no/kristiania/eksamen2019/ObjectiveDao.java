@@ -16,6 +16,7 @@ public class ObjectiveDao extends AbstractDao<Objective> {
     protected void insertMember(Objective operationObjective, PreparedStatement statement) throws SQLException {
         statement.setString(1, operationObjective.getName());
         statement.setString(2, operationObjective.getDescription());
+        statement.setString(3, operationObjective.getStatus());
 
     }
 
@@ -26,6 +27,7 @@ public class ObjectiveDao extends AbstractDao<Objective> {
         operationObjective.setId(resultSet.getInt(1));
         operationObjective.setName(resultSet.getString(2));
         operationObjective.setDescription(resultSet.getString(3));
+        operationObjective.setStatus(resultSet.getString(4));
         return operationObjective;
     }
 

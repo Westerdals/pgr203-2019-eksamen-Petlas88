@@ -16,23 +16,15 @@
     <label>Objective name: <br> <input type="text" name="objectiveName" /></label> <br>
     <label> Objective Description: <br> <input type="text" name="objectiveDescription"></label>
     <p>Set status:</p>
-    <select name="objectiveStatus" id="">
-        <option value="To be done">
-            To be done
-        </option>
-        <option value="Ongoing">
-            Ongoing
-        </option>
-        <option value="Done">
-            Done
-        </option>
+    <select name="memberName" id="statusSelect">
+        <option value="Kek">Kek</option>
     </select>
     <br>
     <button>Add</button>
 </form>
 
 <div>
-    <a href=".">Return to front page</a>
+    <a href="index.html">Return to front page</a>
 </div>
 <p><u>List of objectives:</u></p> <br>
 <table id="objectiveList">
@@ -48,6 +40,12 @@
         text = "<tr> <th>Objective name</th> <th>Description</th> <th>Status</th> </tr>" + text
         document.getElementById("objectiveList").innerHTML = text;
     });
+    fetch("/api/status")
+        .then(function(result) {
+            return result.text();
+        }).then(function(text) {
+        document.getElementById("statusSelect").innerHTML = text;
+    })
 </script>
 </body>
 
