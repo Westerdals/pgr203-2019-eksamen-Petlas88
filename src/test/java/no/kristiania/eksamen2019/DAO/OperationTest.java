@@ -1,7 +1,5 @@
 package no.kristiania.eksamen2019.DAO;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class OperationTest {
 /* This class is not used right now, but tests might be used if it's implemented later
     private JdbcDataSource dataSource;

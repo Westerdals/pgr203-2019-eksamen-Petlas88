@@ -1,4 +1,4 @@
-package no.kristiania.eksamen2019.HTTP;
+package no.kristiania.eksamen2019.Server;
 
 import java.io.IOException;
 import java.io.InputStream;
