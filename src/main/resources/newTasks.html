@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Add operation objective | KristianiaProject</title>
+</head>
+
+<body>
+<h1>Add operation objective</h1>
+
+<form method="POST" action="/api/objectives">
+    <label>Objective name: <br> <input type="text" name="objectiveName" /></label> <br>
+    <label> Objective Description: <br> <input type="text" name="objectiveDescription"></label>
+    <p>Set status:</p>
+    <select name="objectiveStatus" id="">
+        <option value="To be done">
+            To be done
+        </option>
+        <option value="Ongoing">
+            Ongoing
+        </option>
+        <option value="Done">
+            Done
+        </option>
+    </select>
+    <br>
+    <button>Add</button>
+</form>
+
+<div>
+    <a href=".">Return to front page</a>
+</div>
+<p><u>List of objectives:</u></p> <br>
+<table id="objectiveList">
+
+</table>
+<iframe src="Lightsaber.mp3" frameborder="0" allow="autoplay"></iframe>
+
+<script>
+    fetch("/api/objectives")
+        .then(function (response) {
+            return response.text();
+        }).then(function (text) {
+        text = "<tr> <th>Objective name</th> <th>Description</th> <th>Status</th> </tr>" + text
+        document.getElementById("objectiveList").innerHTML = text;
+    });
+</script>
+</body>
+
+</html>

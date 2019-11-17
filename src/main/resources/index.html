@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KristianiaProject</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Project view</h1>
+
+    <div id="projectMembers"></div>
+
+    <div>
+        <a href="newWorker.html" id="newMemberNav">Add or list operation members</a> <br>
+        <a href="newProject.html">Add or list operations</a> <br>
+        <a href="newTasks.html">Add or list operation objectives</a>
+        <div id="txt-div">
+            <div id="txt-inner">
+                <h1 id="gliding-title"><u>Java Project Episode I: A New Code</u></h1> <br>
+                <p>A short time ago in a classroom not far away... <br> <br> <br> <br>
+                    Three students were working on their Java examn, along the way they faced many obstacles, but did
+                    their
+                    best to overcome them, all the while the great emperor Darth Brodwall was breathing down their
+                    necks,
+                    waiting for them to deliever. <br>
+                    The three students felt the perssure but fought on to deliever the best project they knew how to.
+                    <br>
+                    but in the end all they could to was write <br> A New Code.... </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    fetch("/projectMembers")
+        .then(function (response) {
+            return response.text();
+        }).then(function (text) {
+            document.getElementById("projectMembers").innerHTML = text;
+        });
+</script>
+
+</html>

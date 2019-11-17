@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add operation member | KristianiaProject</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Add operation member</h1>
+
+    <form method="POST" action="/api/troopers">
+        <label>Member name:<br><input type="text" name="memberName" /></label> <br>
+        <label>Member email:<br><input type="text" name="email"/></label>
+        <br>
+      <!--  <p>Select Role:</p>
+        <select name="member_role" id="">
+            <option value="">Sith Lord</option>
+            <option value="">Sith</option>
+            <option value="">Trooper</option>
+        </select>
+        <br> -->
+        <button>Add</button>
+    </form>
+
+    <div>
+        <a href=".">Return to front page</a>
+    </div>
+    <p><u>List of operation members</u></p>
+    <table id="operationMembers">
+
+    </table>
+    <iframe src="JoinMe.mp3" frameborder="0" allow="autoplay"></iframe>
+
+    <script>
+        fetch("/api/troopers")
+            .then(function (response) {
+                return response.text();
+            }).then(function (text) {
+                text = "<tr> <th>Name</th> <th>Email</th> </tr>" + text
+            document.getElementById("operationMembers").innerHTML = text;
+        });
+    </script>
+
+</body>
+
+</html>
