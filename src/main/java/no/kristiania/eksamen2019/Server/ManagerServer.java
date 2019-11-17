@@ -34,6 +34,7 @@ public class ManagerServer {
         server.addController("/api/troopers", new TrooperHttpController(new TrooperDao(dataSource)));
         server.addController("/api/objectives", new ObjectiveHttpController(new ObjectiveDao(dataSource)));
         server.addController("/api/status", new ObjectiveStatusHttpController(new ObjectiveStatusDao(dataSource)));
+        server.addController("/api/editStatus", new EditObjectiveStatusHttpController(new ObjectiveDao(dataSource) ));
 
         server.start();
     }

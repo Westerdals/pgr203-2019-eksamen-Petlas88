@@ -1,20 +1,22 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.DAO;
 
+import no.kristiania.eksamen2019.HTTP.HttpController;
+import no.kristiania.eksamen2019.HTTP.ObjectiveHttpController;
+import no.kristiania.eksamen2019.Server.HttpServer;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.net.URLDecoder;
 import java.sql.SQLException;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class EditObjectiveStatus implements HttpController  {
+public class EditObjectiveStatusHttpController implements HttpController {
     private ObjectiveDao objectiveDao;
     private static final org.slf4j.Logger Logger =
             LoggerFactory.getLogger(ObjectiveHttpController.class);
 
-    public EditObjectiveStatus(ObjectiveDao objectiveDao) {
+    public EditObjectiveStatusHttpController(ObjectiveDao objectiveDao) {
         this.objectiveDao = objectiveDao;
     }
 
@@ -61,7 +63,7 @@ public class EditObjectiveStatus implements HttpController  {
     }
     public String getBody() throws SQLException {
         return objectiveDao.listAll().stream()
-                .map(p -> String.format("<option value='%s'>%s</option>", p.getId(), p.getName()))
+                .map(p -> String.format("<option value='%s'>%s</option>", p.getName(), p.getName()))
                 .collect(Collectors.joining(""));
     }
     }

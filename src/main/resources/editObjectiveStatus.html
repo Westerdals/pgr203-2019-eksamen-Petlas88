@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Edit objective status | KristianiaProject</title>
+</head>
+<body>
+    <form action="/api/editStatus" method="POST">
+        <p>Select task:</p> <br>
+        <select name="objectiveName" id="objective"></select> <br>
+        <p>Select new status:</p> <br>
+        <select name="statusName" id="newStatus"></select>
+    </form>
+    <script>
+        fetch("/api/objectives")
+            .then(function(result) {
+                return result.text();
+            }).then(function(text) {
+            document.getElementById("objective").innerHTML = text;
+        });
+        fetch("/api/status")
+            .then(function(result) {
+                return result.text();
+            }).then(function(text) {
+            document.getElementById("newStatus").innerHTML = text;
+        });
+    </script>
+</body>
+</html>
