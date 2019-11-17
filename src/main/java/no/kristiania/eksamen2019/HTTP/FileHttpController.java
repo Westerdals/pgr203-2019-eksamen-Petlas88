@@ -19,7 +19,7 @@ public class FileHttpController implements HttpController {
     public void handle(String requestAction, String requestPath, Map<String, String> requestParameters, String body, OutputStream outputStream) throws IOException {
         File file = new File(httpServer.fileLocation + requestPath);
         if (file.isDirectory()) {
-            file = new File(file, "index.html");
+            file = new File(file, "website/index.html" );
         }
         if (file.exists()) {
             outputStream.write(("HTTP/1.1 200 OK\r\n" +
