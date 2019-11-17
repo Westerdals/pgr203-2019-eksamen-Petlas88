@@ -183,3 +183,9 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/java,macos,maven,windows,intellij
+
+/.iml
+/target/
+/dependency-reduced-pom.xml
+/*.idea/
+/task-manager.properties
