@@ -122,8 +122,8 @@ body {
 * [ ] Dere har registrert link til GitHub repository i Wiseflow
 * [x] Koden er sjekket inn på github.com/Westerdals-repository
 * [x] GitHub repository er private, men delt med gruppen dere gjør hverandrevurdering på
-* [ ] Dere har mottatt minst 2 positive og 2 korrektive GitHub issues i github repository fra en annen gruppe
-* [ ] Dere har committed kode med begge prosjektdeltagernes GitHub konto (alternativt: README beskriver arbeidsform)
+* [x] Dere har mottatt minst 2 positive og 2 korrektive GitHub issues i github repository fra en annen gruppe
+* [x] Dere har committed kode med begge prosjektdeltagernes GitHub konto (alternativt: README beskriver arbeidsform)
 
 ### README.md
 
@@ -152,12 +152,12 @@ body {
 
 ## Vedlegg: Mulighet for ekstrapoeng
 
-* [ ] Avansert datamodell (mer enn 3 tabeller)
+* [x] Avansert datamodell (mer enn 3 tabeller)
 * [ ] Avansert funksjonalitet (redigering av prosjektmedlemmer, statuskategorier, prosjekter)
 * [ ] Implementasjon av cookies for å konstruere sesjoner
 * [ ] UML diagram som dokumenterer datamodell og/eller arkitektur (presentert i README.md)
-* [ ] Rammeverk rundt Http-håndtering (en god HttpMessage class med HttpRequest og HttpResponse subtyper) som gjenspeiler RFC7230
-* [ ] Korrekt håndtering av norske tegn i HTTP
-* [ ] God bruk av DAO-pattern
+* [x] Rammeverk rundt Http-håndtering (en god HttpMessage class med HttpRequest og HttpResponse subtyper) som gjenspeiler RFC7230
+* [x] Korrekt håndtering av norske tegn i HTTP
+* [x] God bruk av DAO-pattern
 * [ ] Link til video med god demonstrasjon av ping-pong programmering
 * [ ] Annet
