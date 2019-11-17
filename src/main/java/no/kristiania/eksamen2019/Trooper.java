@@ -8,11 +8,11 @@ public class Trooper {
     private long id;
     private String name;
     private String email;
+    private String role;
 
     public long getId() {
         return id;
     }
-
 
     public void setId(long id) {
         this.id = id;
@@ -34,6 +34,15 @@ public class Trooper {
         this.email = email;
     }
 
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+
 
     public Trooper() {
 
@@ -54,7 +63,8 @@ public class Trooper {
         Trooper trooper = (Trooper) o;
         return id == trooper.id &&
                 Objects.equals(name, trooper.name) &&
-                Objects.equals(email, trooper.email);
+                Objects.equals(email, trooper.email) &&
+                Objects.equals(role, trooper.role);
     }
 
     @Override
@@ -68,6 +78,7 @@ public class Trooper {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }

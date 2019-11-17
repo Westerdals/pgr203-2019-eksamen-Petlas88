@@ -22,22 +22,23 @@ public class TrooperDao extends AbstractDao<Trooper> {
     protected void insertMember(Trooper member, PreparedStatement statement) throws SQLException {
         statement.setString(1, member.getName());
         statement.setString(2, member.getEmail());
-
+        statement.setString(3, member.getRole());
     }
 
     @Override
     protected Trooper readObject(ResultSet resultSet) throws SQLException {
-        Trooper member = new Trooper();
+        Trooper object = new Trooper();
 
-        member.setId(resultSet.getInt(1));
-        member.setName(resultSet.getString(2));
-        member.setEmail(resultSet.getString(3));
-        return member;
+        object.setId(resultSet.getInt(1));
+        object.setName(resultSet.getString(2));
+        object.setEmail(resultSet.getString(3));
+        object.setRole(resultSet.getString(4));
+        return object;
     }
 
 
     public long insert(Trooper Trooper) throws SQLException {
-        long id = insert(Trooper, "insert into Troopers (name,email) values (?,?)");
+        long id = insert(Trooper, "insert into Troopers (name,email,role) values (?,?)");
         Trooper.setId(id);
         return id;
     }

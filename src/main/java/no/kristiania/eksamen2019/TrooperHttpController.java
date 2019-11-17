@@ -28,8 +28,9 @@ public class TrooperHttpController implements HttpController {
                 requestParameters = HttpServer.parseRequestParameters(requestBody);
                 Trooper trooper = new Trooper();
 
-                String name = URLDecoder.decode(requestParameters.get("memberName"));
+                String name = URLDecoder.decode(requestParameters.get("name"));
                 String email = URLDecoder.decode(requestParameters.get("email"));
+                String role = URLDecoder.decode(requestParameters.get("role"));
 
                 trooper.setName(name);
                 trooper.setEmail(email);
