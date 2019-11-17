@@ -23,7 +23,7 @@ public class ManagerServer {
         try(FileReader reader = new FileReader("task-manager.properties")){
             properties.load(reader);
         }
-        dataSource.setUrl(properties.getProperty("dataSource.url"));
+        dataSource. setUrl(properties.getProperty("dataSource.url"));
         dataSource.setUser(properties.getProperty("dataSource.username"));
         dataSource.setPassword(properties.getProperty("dataSource.password"));
 
