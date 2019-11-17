@@ -1,4 +1,8 @@
- # PG203 Mappeinnlevering for gruppe <wiseflow gruppenummer>
+# PG203 Mappeinnlevering for gruppe <wiseflow gruppenummer>
+
+[![Build Status](https://travis-ci.com/Westerdals/pgr203-2019-eksamen-Petlas88.svg?token=DbSPpASsFkxmHsN384Nm&branch=master)](https://travis-ci.com/Westerdals/pgr203-2019-eksamen-Petlas88)
+
+# PG203 Mappeinnlevering for gruppe <wiseflow gruppenummer>
 
 *Dette er en mal som det anbefales at dere følger for `README.md`-filen til hovedinnleveringen i PGR203* 
 
