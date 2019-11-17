@@ -1,5 +1,7 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.DAO;
 
+import no.kristiania.eksamen2019.Trooper;
+import no.kristiania.eksamen2019.TrooperDao;
 import org.assertj.core.api.AssertionsForClassTypes;
 import org.flywaydb.core.Flyway;
 import org.h2.jdbcx.JdbcDataSource;
@@ -47,7 +49,7 @@ class TrooperTest {
     }
 
     @Test
-    void shouldFindtrooperinDB() throws SQLException {
+    void shouldFindTroopersinDB() throws SQLException {
         Trooper trooper = sampleTrooper();
         TrooperDao dao = new TrooperDao(dataSource);
 
@@ -57,7 +59,7 @@ class TrooperTest {
     }
 
     @Test
-    void shouldSaveAllProductFields() throws SQLException {
+    void shouldFindGeneratedIdInDb() throws SQLException {
         TrooperDao dao = new TrooperDao(dataSource);
         Trooper trooper = new Trooper();
         long id = dao.insert(trooper);
