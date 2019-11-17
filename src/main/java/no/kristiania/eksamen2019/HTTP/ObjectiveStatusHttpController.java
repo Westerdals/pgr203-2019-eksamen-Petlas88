@@ -68,10 +68,9 @@ public class ObjectiveStatusHttpController implements HttpController {
 
 
     public String getBody() throws SQLException {
-        String body = objectiveStatusDao.listAll().stream()
+        return objectiveStatusDao.listAll().stream()
                 .map(p -> String.format("<option value='%s'>%s</option>", p.getName(), p.getName()))
                 .collect(Collectors.joining(""));
-        return body;
     }
 
 

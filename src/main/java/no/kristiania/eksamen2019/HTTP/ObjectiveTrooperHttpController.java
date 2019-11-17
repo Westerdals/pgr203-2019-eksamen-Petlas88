@@ -105,10 +105,7 @@ public class ObjectiveTrooperHttpController implements HttpController {
                     "\n" +
                     "    </article>");
         }
-        body = bod.toString();
-
-
-        return body;
+        return bod.toString();
     }
 
 

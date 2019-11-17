@@ -1,5 +1,9 @@
 package no.kristiania.eksamen2019.HTTP;
 
+import no.kristiania.eksamen2019.DAO.Objective;
+import no.kristiania.eksamen2019.DAO.ObjectiveDao;
+import no.kristiania.eksamen2019.DAO.Trooper;
+import no.kristiania.eksamen2019.DAO.TrooperDao;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
@@ -8,15 +12,15 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-public class ListObjectiveTroopersHttpController {
-    private ObjectiveDao taskDao;
-    private TrooperDao projectMemberDao;
+public class ListObjectiveTroopersHttpController implements HttpController {
+    private ObjectiveDao objectiveDao;
+    private TrooperDao trooperDao;
 
-    private static final org.slf4j.Logger Logger = LoggerFactory.getLogger(ListObjectiveMemberHttpController.class);
+    private static final org.slf4j.Logger Logger = LoggerFactory.getLogger(ListObjectiveTroopersHttpController.class);
 
-    public ListObjectiveMemberHttpController(ObjectiveDao taskDao, TrooperDao projectMemberDao) {
-        this.taskDao = taskDao;
-        this.projectMemberDao = projectMemberDao;
+    public ListObjectiveTroopersHttpController(ObjectiveDao objectiveDao, TrooperDao trooperDao) {
+        this.objectiveDao = objectiveDao;
+        this.trooperDao = trooperDao;
     }
 
 
@@ -57,17 +61,17 @@ public class ListObjectiveTroopersHttpController {
         String body = "";
         StringBuilder bod = new StringBuilder();
 
-        List<Trooper> trooper = projectMemberDao.listAll();
+        List<Trooper> trooper = trooperDao.listAll();
         for (int i = 0; i < trooper.size(); i++) {
 
             String trooperId = "" + trooper.get(i).getId();
-            String sql = "select t.*, null n from tasktroopers tm join tasks t on tm.task_id = t.id where tm.trooper_id = " + trooperId;
-            String taskNames = "";
+            String sql = "select t.*, null n from objectivetroopers tm join objectives t on tm.objective_id = t.id where tm.trooper_id = " + trooperId;
+            String objectiveNames = "";
 
-            List<Objective> tasks = taskDao.listAll(sql);
+            List<Objective> objectives = objectiveDao.listAll(sql);
 
-            for (int j = 0; j < tasks.size(); j++) {
-                taskNames = taskNames + tasks.get(j).getName() + ", ";
+            for (int j = 0; j < objectives.size(); j++) {
+                objectiveNames = objectiveNames + objectives.get(j).getName() + ", ";
             }
             System.out.println("i: " + i);
             bod.append("<article>\n" +
@@ -79,7 +83,7 @@ public class ListObjectiveTroopersHttpController {
                     "\n" +
                     "<h4>Objectives:</h4>" +
                     "\n" +
-                    "        <div>" + taskNames + "</div>\n" +
+                    "        <div>" + objectiveNames + "</div>\n" +
                     "\n" +
                     "    </article>");
         }
@@ -88,11 +92,5 @@ public class ListObjectiveTroopersHttpController {
 
         return body;
     }
-
-}
-
-
-
-
 
 }

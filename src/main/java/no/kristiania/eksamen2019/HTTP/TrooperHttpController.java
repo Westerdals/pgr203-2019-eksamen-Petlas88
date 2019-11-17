@@ -71,9 +71,8 @@ public class TrooperHttpController implements HttpController {
     }
 
     public String getBody() throws SQLException {
-        String body = trooperDao.listAll().stream()
+        return trooperDao.listAll().stream()
                 .map(p -> String.format("<tr> <td>%s</td> <td>%s</td> <td>%s</td> </tr>", p.getName(),
                         p.getEmail(), p.getRole())).collect( Collectors.joining(""));
-        return body;
     }
 }
