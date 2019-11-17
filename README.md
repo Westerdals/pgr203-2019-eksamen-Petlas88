@@ -25,9 +25,9 @@ Vi ønsker å understreke at selvom frontend delen her er litt opparbeidet, så 
 
 ### Funksjonalitet
 
-1. Skriv
-2. Et
-3. Kort
+1. Start programmet via .jar
+2. Løsningen kan aksesseres i browser via localhost:8080
+3. 
 4. Eksempel
 5. På
 6. Bruk
@@ -45,7 +45,7 @@ Beskrivelse av hvordan en habil ny utvikler som ser prosjektet for første gang 
 ### Hva vi lærte underveis
 Vi har lært mye av prinsippene rundt HTTP og JDBC. Denne oppgaven har på mange måter lagt veien for videre læring. Vi har også lært veldig mye om det å feilsøke kode, da vi underveis har møtt på mange utfordringer. Mest av alt har vi lært at ting tar veldig mye lengre tid enn man først ser for seg, og vi burde nok ha startet tidligere, men da vi har hatt andre eksamener ble det litt feilprioritert.
 ### Hva vi fikk til bra i koden vår
-Vi føler at vi har fått til mer enn vi i utgangspunktet trodde vi skulle gjøre, og har gått litt utover minimumskravet. Vi føler at strukturen er jevnt over ganske bra og følger de konvensjonene vi har lært i ganske stor grad.
+Vi føler at vi har fått til mer enn vi i utgangspunktet trodde vi skulle gjøre, og har gått litt utover minimumskravet. Vi føler at strukturen er jevnt over ganske bra og følger de konvensjonene vi har lært i ganske stor grad. Føler vi har oppnådd det å få en tilstrekkelig forståelse av konseptene som tillater oss å ekspandere litt på koden.
 ### Hva vi skulle ønske vi hadde gjort annerledes
 Som nevnt over skulle vi ha begynt ha tidligere. Vi har underveis møtt på en del utfordringer, og når man er presset på tid fører dette til stress og sene kvelder. Konklusjonen er at vi skulle ha planlagt bedre i forkant av prosjektet. 
 ## Evaluering fra annen gruppe
