@@ -13,36 +13,27 @@
     <div id="projectMembers"></div>
 
     <div>
-        <a href="newWorker.html" id="newMemberNav">Add or list operation members</a> |
-        <a href="newProject.html">Add or list operations</a> |
-        <a href="newTasks.html">Add or list operation objectives</a> |
-        <a href="newStatus.html">Add new status</a> |
-        <a href="editObjectiveStatus.html">Edit objective status</a>
-        <a href="addObjectiveTrooper.html">Add Trooper to Objective</a>
-        <a href="ListObjectiveTroopers.html">List Troopers assigned to Objectives</a>
+        <a href="newWorker.html" id="newMemberNav">Add or List Members</a> |
+        <a href="newTasks.html">Add or List Objectives</a> |
+        <a href="newStatus.html">Add New Status</a> <br>
+        <a href="editObjectiveStatus.html">Edit Objective Status</a> |
+        <a href="addObjectiveTrooper.html">Add Trooper to Objective</a> |
+        <a href="ListObjectiveTroopers.html">List Troopers Assigned to Objectives</a>
         <div id="txt-div">
             <div id="txt-inner">
-                <h1 id="gliding-title"><u>Java Project Episode I: A New Code</u></h1> <br>
+                <h1 id="gliding-title"><u>Java Project Episode IV: A New Code</u></h1> <br>
                 <p>A short time ago in a classroom not far away... <br> <br> <br> <br>
                     Three students were working on their Java examn, along the way they faced many obstacles, but did
                     their
                     best to overcome them, all the while the great emperor Darth Brodwall was breathing down their
                     necks,
-                    waiting for them to deliever. <br>
+                    waiting for them to deliever. <br> <br>
                     The three students felt the perssure but fought on to deliever the best project they knew how to.
                     <br>
-                    but in the end all they could to was write <br> A New Code.... </p>
+                    but in the end all they could to was write <br> <br> A New Code.... </p>
             </div>
         </div>
     </div>
 </body>
-<script>
-    fetch("/projectMembers")
-        .then(function (response) {
-            return response.text();
-        }).then(function (text) {
-            document.getElementById("projectMembers").innerHTML = text;
-        });
-</script>
 
 </html>

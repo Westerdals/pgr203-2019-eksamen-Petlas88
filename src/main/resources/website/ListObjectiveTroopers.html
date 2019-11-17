@@ -7,38 +7,22 @@
 </head>
 <body>
 
-
-
-<h1>List Tasks status and members</h1>
+<h1>Objectives</h1>
 <div id="container" class="container">
     <p>Loading...</p>
-
 </div>
-
-
+<br>
+<br>
 <div>
     <a href="index.html">Return to front page</a>
 </div>
-
-
-
 </body>
-
-
 <script>
-
-
-
-
     fetch("/api/addObjectiveTrooper")
         .then(function(result) {
             return result.text();
         }).then(function(text) {
         document.getElementById("container").innerHTML = text;
-
-
-
     });
-
 </script>
 </html>

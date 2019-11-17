@@ -16,11 +16,11 @@
         <br>
         <p>Select Role:</p>
         <select name="role" id="">
-            <option value="Death Trooper">Sith Lord</option>
-            <option value="Stormtrooper">Sith</option>
-            <option value="Officer">Officer</option>
-            <option value="Trooper">Trooper</option>
-            <option value="Janitor">Janitor</option>
+            <option value="Death Trooper">Death Trooper</option>
+            <option value="Shadow Trooper">Shadow Trooper</option>
+            <option value="Inquisitor Trooper">Inquisitor Trooper</option>
+            <option value="Clone Trooper">Clone Trooper</option>
+            <option value="Stormtrooper">Stormtrooper</option>
         </select>
         <br>
         <button>Add</button>
@@ -40,7 +40,7 @@
             .then(function (response) {
                 return response.text();
             }).then(function (text) {
-                text = "<tr> <th>Name</th> <th>Email</th> <th>Role</th> </tr>" + text
+                text = "<tr> <th>ID</th> <th>Name</th> <th>Email</th> <th>Role</th> </tr>" + text
             document.getElementById("operationMembers").innerHTML = text;
         });
     </script>

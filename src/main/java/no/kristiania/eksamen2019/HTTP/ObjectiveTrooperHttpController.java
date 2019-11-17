@@ -91,19 +91,27 @@ public class ObjectiveTrooperHttpController implements HttpController {
             if(status == null){
                 status = "No status";
             }
+            String description = objectives.get(i).getDescription();
+            if(description == null) {
+                description = "No description available";
+            }
 
-            bod.append("<article>\n" +
+            bod.append("<hr> <article>\n" +
                     "        <h1>" + objectives.get(i).getName() + "</h1>\n" +
+                    "\n" +
+                    "        <h4> Description: </h4>\n" +
+                    "\n" +
+                    "        <p>" + description + "</p>\n" +
                     "\n" +
                     "        <h4> Status: </h4>\n" +
                     "\n" +
                     "        <p>" + status + "</p>\n" +
                     "\n" +
-                    "        <h4> Members: </h4>\n" +
+                    "        <h4> Troopers: </h4>\n" +
                     "\n" +
                     "        <div>" + trooperName + "</div>\n" +
                     "\n" +
-                    "    </article>");
+                    "    </article> ");
         }
         return bod.toString();
     }

@@ -3,6 +3,7 @@ body{
     width: 100vw;
     background-image: url("/DeathStar.jpeg");
     background-size: cover;
+    background-color: black;
     background-repeat: no-repeat;
     text-align: center;
     overflow-x: hidden;

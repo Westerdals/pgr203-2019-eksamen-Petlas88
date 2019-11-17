@@ -73,7 +73,8 @@ public class ObjectiveHttpController implements HttpController {
 
     public String getBody() throws SQLException {
         return objectiveDao.listAll().stream()
-                .map(p -> String.format("<tr> <td>%s</td> <td>%s</td> <td>%s</td> </tr>", p.getName(), p.getDescription(), p.getStatus()))
+                .map(p -> String.format("<tr> <td>%s</td> <td>%s</td> <td>%s</td> <td>%s</td> </tr>", p.getId(),
+                        p.getName(), p.getDescription(), p.getStatus()))
                 .collect( Collectors.joining(""));
     }
 }

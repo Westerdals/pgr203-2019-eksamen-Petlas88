@@ -37,7 +37,7 @@
         .then(function (response) {
             return response.text();
         }).then(function (text) {
-        text = "<tr> <th>Objective name</th> <th>Description</th> <th>Status</th> </tr>" + text
+        text = "<tr> <th>Objective ID</th><th>Objective Name</th> <th>Description</th> <th>Status</th> </tr>" + text
         document.getElementById("objectiveList").innerHTML = text;
     });
     fetch("/api/status")
