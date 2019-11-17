@@ -2,11 +2,9 @@ package no.kristiania.eksamen2019.Server;
 
 import no.kristiania.eksamen2019.DAO.ObjectiveDao;
 import no.kristiania.eksamen2019.DAO.ObjectiveStatusDao;
+import no.kristiania.eksamen2019.DAO.ObjectiveTrooperDao;
 import no.kristiania.eksamen2019.DAO.TrooperDao;
-import no.kristiania.eksamen2019.HTTP.EditObjectiveStatusHttpController;
-import no.kristiania.eksamen2019.HTTP.ObjectiveHttpController;
-import no.kristiania.eksamen2019.HTTP.ObjectiveStatusHttpController;
-import no.kristiania.eksamen2019.HTTP.TrooperHttpController;
+import no.kristiania.eksamen2019.HTTP.*;
 import org.flywaydb.core.Flyway;
 import org.postgresql.ds.PGSimpleDataSource;
 
@@ -36,7 +34,8 @@ public class ManagerServer {
         server.addController("/api/objectives", new ObjectiveHttpController(new ObjectiveDao(dataSource)));
         server.addController("/api/status", new ObjectiveStatusHttpController(new ObjectiveStatusDao(dataSource)));
         server.addController("/api/editStatus", new EditObjectiveStatusHttpController(new ObjectiveDao(dataSource)));
-
+        server.addController("/api/addObjectiveTrooper", new ObjectiveTrooperHttpController(new ObjectiveTrooperDao(dataSource),
+                new TrooperDao(dataSource), new ObjectiveDao(dataSource)));
         server.start();
     }
 }

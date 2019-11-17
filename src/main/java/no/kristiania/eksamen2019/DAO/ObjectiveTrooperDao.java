@@ -36,6 +36,6 @@ public class ObjectiveTrooperDao extends AbstractDao<ObjectiveTrooper> {
             System.out.println( "FINNES ALEREDE!" );
             return;
         }
-        insert( objectiveTrooper, "insert into objectivetroopers (member_id,task_id) values (?,?)" );
+        insert( objectiveTrooper, "insert into objectivetroopers (TrooperID,ObjectiveID) values (?,?)" );
     }
 }

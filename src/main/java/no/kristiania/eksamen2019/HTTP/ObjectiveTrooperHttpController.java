@@ -31,8 +31,8 @@ public class ObjectiveTrooperHttpController implements HttpController {
             if (requestAction.equalsIgnoreCase("POST")) {
                 requestParameters = HttpServer.parseRequestParameters(requestBody);
                 ObjectiveTrooper objectiveTrooper = new ObjectiveTrooper();
-                objectiveTrooper.setTrooperId(Integer.parseInt(requestParameters.get("trooperName")));
-                objectiveTrooper.setObjectiveId(Integer.parseInt(requestParameters.get("objectiveName")));
+                objectiveTrooper.setTrooperId(Integer.parseInt(requestParameters.get("trooperId")));
+                objectiveTrooper.setObjectiveId(Integer.parseInt(requestParameters.get("objectiveId")));
 
                 objectiveTrooperDao.insert(objectiveTrooper);
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n"+
@@ -77,14 +77,14 @@ public class ObjectiveTrooperHttpController implements HttpController {
 
             String objectiveId = "" + objectives.get(i).getId();
             String sql = "select m.* from objectivetroopers tm " +
-                    "join troopers m on tm.member_id = m.id where tm.objective_id = " + objectiveId;
-            String memberName = "";
+                    "join troopers m on tm.TrooperID = m.id where tm.ObjectiveID = " + objectiveId;
+            String trooperName = "";
             System.out.println(i);
 
             List<Trooper> troopers = trooperDao.listAll(sql);
             System.out.println("size: " + troopers.size());
             for (int j = 0; j < troopers.size(); j++) {
-                memberName = memberName + troopers.get(j).getName() + ", ";
+                trooperName = trooperName + troopers.get(j).getName() + ", ";
 
             }
             String status = objectives.get(i).getStatus();
@@ -101,7 +101,7 @@ public class ObjectiveTrooperHttpController implements HttpController {
                     "\n" +
                     "        <h4> Members: </h4>\n" +
                     "\n" +
-                    "        <div>" + memberName + "</div>\n" +
+                    "        <div>" + trooperName + "</div>\n" +
                     "\n" +
                     "    </article>");
         }
