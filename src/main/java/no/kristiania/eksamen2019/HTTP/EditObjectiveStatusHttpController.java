@@ -1,7 +1,7 @@
-package no.kristiania.eksamen2019.DAO;
+package no.kristiania.eksamen2019.HTTP;
 
-import no.kristiania.eksamen2019.HTTP.HttpController;
-import no.kristiania.eksamen2019.HTTP.ObjectiveHttpController;
+import no.kristiania.eksamen2019.DAO.Objective;
+import no.kristiania.eksamen2019.DAO.ObjectiveDao;
 import no.kristiania.eksamen2019.Server.HttpServer;
 import org.slf4j.LoggerFactory;
 

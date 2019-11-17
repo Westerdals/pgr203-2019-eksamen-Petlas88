@@ -3,6 +3,7 @@ package no.kristiania.eksamen2019.Server;
 import no.kristiania.eksamen2019.DAO.ObjectiveDao;
 import no.kristiania.eksamen2019.DAO.ObjectiveStatusDao;
 import no.kristiania.eksamen2019.DAO.TrooperDao;
+import no.kristiania.eksamen2019.HTTP.EditObjectiveStatusHttpController;
 import no.kristiania.eksamen2019.HTTP.ObjectiveHttpController;
 import no.kristiania.eksamen2019.HTTP.ObjectiveStatusHttpController;
 import no.kristiania.eksamen2019.HTTP.TrooperHttpController;
@@ -34,7 +35,7 @@ public class ManagerServer {
         server.addController("/api/troopers", new TrooperHttpController(new TrooperDao(dataSource)));
         server.addController("/api/objectives", new ObjectiveHttpController(new ObjectiveDao(dataSource)));
         server.addController("/api/status", new ObjectiveStatusHttpController(new ObjectiveStatusDao(dataSource)));
-        server.addController("/api/editStatus", new EditObjectiveStatusHttpController(new ObjectiveDao(dataSource) ));
+        server.addController("/api/editStatus", new EditObjectiveStatusHttpController(new ObjectiveDao(dataSource)));
 
         server.start();
     }
