@@ -27,6 +27,7 @@ public class ManagerServer {
         server.setFileLocation("src/main/resources");
         server.addController("/api/troopers", new TrooperHttpController(new TrooperDao(dataSource)));
         server.addController("/api/objectives", new ObjectiveHttpController(new ObjectiveDao(dataSource)));
+        server.addController("/api/status", new ObjectiveStatusHttpController(new ObjectiveStatusDao(dataSource)));
 
         server.start();
     }

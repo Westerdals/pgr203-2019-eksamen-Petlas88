@@ -32,7 +32,7 @@ select {
     outline: none;
 }
 
-#objectiveList {
+table {
     width: 80%;
 }
 
