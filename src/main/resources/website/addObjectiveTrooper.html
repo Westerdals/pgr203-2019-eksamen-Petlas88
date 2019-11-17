@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add project member | Kristiania Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<h1>Add Task to member</h1>
+<form  action="/api/addObjectiveTrooper" method="POST">
+    Member ID:<input name="trooperId"/>
+    Task ID: <input name="objectiveId"/>
+    <button>Add</button>
+</form>
+
+
+<div>
+    <a href="index.html">Return to front page</a>
+</div>
+
+
+
+
+</body>
+
+
+<script>
+
+
+/*
+    fetch("/api/troopers")
+        .then(function(result) {
+            return result.text();
+        }).then(function(text) {
+        document.getElementById("addTrooper").innerHTML = text;
+
+
+    });
+
+    fetch("/api/objectives")
+        .then(function(result) {
+            return result.text();
+        }).then(function(text) {
+        document.getElementById("addObjective").innerHTML = text;
+
+
+
+    });*/
+</script>
+</html>

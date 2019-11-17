@@ -4,42 +4,30 @@ import java.util.Objects;
 
 public class ObjectiveTrooper {
 
-    private long id;
-    private String name;
-    private String email;
+    private int trooperId;
+    private int objectiveId;
 
-    public long getId() {
-        return id;
+    public int getTrooperId() {
+        return trooperId;
+    }
+    public void setTrooperId(int trooperId) {
+        this.trooperId = trooperId;
     }
 
-
-    public void setId(long id) {
-        this.id = id;
+    public int getObjectiveId() {
+        return objectiveId;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setObjectiveId(int objectiveId) {
+        this.objectiveId = objectiveId;
     }
 
 
     public ObjectiveTrooper() {
     }
 
-    public ObjectiveTrooper(String name, String email) {
-        this.name = name;
-        this.email = email;
+    public ObjectiveTrooper(int objectId, int trooperId) {
+        this.objectiveId = objectId;
+        this.trooperId = trooperId;
 
     }
 
@@ -48,23 +36,20 @@ public class ObjectiveTrooper {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ObjectiveTrooper trooper = (ObjectiveTrooper) o;
-        return id == trooper.id &&
-                Objects.equals(name, trooper.name) &&
-                Objects.equals(email, trooper.email);
+        ObjectiveTrooper that = (ObjectiveTrooper) o;
+        return trooperId == that.trooperId &&
+                objectiveId == that.objectiveId;
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email);
+        return Objects.hash(trooperId, objectiveId);
     }
 
     @Override
     public String toString() {
         return "ObjectiveTrooper{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                "trooperId=" + trooperId +
+                ", objectiveId='" + objectiveId + '\'' +
                 '}';
     }
 }
