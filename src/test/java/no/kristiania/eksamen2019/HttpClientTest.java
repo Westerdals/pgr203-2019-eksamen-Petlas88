@@ -1,6 +1,5 @@
-package no.kristiania.eksamen2019.Server;
+package no.kristiania.eksamen2019;
 
-import no.kristiania.eksamen2019.HttpClient;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

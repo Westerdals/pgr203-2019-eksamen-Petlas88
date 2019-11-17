@@ -1,26 +1,18 @@
-package no.kristiania.eksamen2019.DAO;
+package no.kristiania.eksamen2019;
 
-import no.kristiania.eksamen2019.Operation;
-import no.kristiania.eksamen2019.OperationDao;
-import no.kristiania.eksamen2019.Operation;
 import org.flywaydb.core.Flyway;
 import org.h2.jdbcx.JdbcDataSource;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import java.sql.SQLException;
 import java.util.Random;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class OperationTest {
-/* This class is not used right now, but tests might be used if it's implemented later
+
     private JdbcDataSource dataSource;
 
     public static Operation sampleOperation() {
         Operation operation = new Operation();
-        operation.setName(pickOne(new String[]{"Maintenance of the Death Star",
-                "Upgrade Darth Vader's Suit", "Secure sufficient tea exports"}));
+        operation.setName(pickOne(new String[]{"Battle of Hoth",
+                "Battle of Endor", "Defence of the Death Star"}));
         return operation;
     }
 
@@ -42,15 +34,5 @@ public class OperationTest {
         Flyway.configure().dataSource( dataSource ).load().migrate();
         return dataSource;
     }
-    
-    @Test
-    void shouldFindOperationInDb() throws SQLException {
-        Operation operation = sampleOperation();
-        OperationDao dao = new OperationDao(dataSource);
 
-        dao.insert(operation);
-        System.out.println(dao.listAll());
-        assertThat(dao.listAll()).contains(operation);
-    }
-*/
 }
