@@ -1,7 +1,4 @@
-package no.kristiania.eksamen2019;
-
-import jdk.dynalink.Operation;
-import org.postgresql.ds.PGSimpleDataSource;
+package no.kristiania.eksamen2019.DAO;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -9,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Objects;
 
 public class TrooperDao extends AbstractDao<Trooper> {
 

@@ -1,6 +1,9 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.HTTP;
 
 
+import no.kristiania.eksamen2019.DAO.Objective;
+import no.kristiania.eksamen2019.DAO.ObjectiveDao;
+import no.kristiania.eksamen2019.Server.HttpServer;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -12,7 +15,7 @@ import java.util.stream.Collectors;
 public class ObjectiveHttpController implements HttpController {
     private ObjectiveDao objectiveDao;
     private static final org.slf4j.Logger Logger =
-            LoggerFactory.getLogger(TrooperHttpController.class);
+            LoggerFactory.getLogger( TrooperHttpController.class);
 
     public ObjectiveHttpController(ObjectiveDao objectiveDao) {
 

@@ -1,6 +1,8 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.Server;
 
 
+import no.kristiania.eksamen2019.DAO.Trooper;
+import no.kristiania.eksamen2019.DAO.TrooperDao;
 import org.flywaydb.core.Flyway;
 import org.postgresql.ds.PGSimpleDataSource;
 import java.io.BufferedReader;

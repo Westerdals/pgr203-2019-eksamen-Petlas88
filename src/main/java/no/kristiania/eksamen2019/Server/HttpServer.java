@@ -1,5 +1,9 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.Server;
 
+import no.kristiania.eksamen2019.HTTP.EchoHttpController;
+import no.kristiania.eksamen2019.HTTP.FileHttpController;
+import no.kristiania.eksamen2019.HTTP.HttpController;
+import no.kristiania.eksamen2019.HTTP.HttpServerRequest;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import java.io.IOException;

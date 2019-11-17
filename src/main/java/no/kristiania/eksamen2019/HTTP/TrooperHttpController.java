@@ -1,6 +1,9 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.HTTP;
 
 
+import no.kristiania.eksamen2019.DAO.Trooper;
+import no.kristiania.eksamen2019.DAO.TrooperDao;
+import no.kristiania.eksamen2019.Server.HttpServer;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -9,12 +12,12 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class ObjectiveTrooperHttpController implements HttpController {
+public class TrooperHttpController implements HttpController {
     private static final org.slf4j.Logger Logger = LoggerFactory.getLogger(TrooperHttpController.class);
-    private ObjectiveTrooperDao trooperDao;
+    private TrooperDao trooperDao;
 
 
-    public ObjectiveTrooperHttpController(ObjectiveTrooperDao trooperDao) {
+    public TrooperHttpController(TrooperDao trooperDao) {
         this.trooperDao = trooperDao;
     }
 
@@ -25,19 +28,20 @@ public class ObjectiveTrooperHttpController implements HttpController {
             if (requestAction.equalsIgnoreCase("POST")) {
 
                 requestParameters = HttpServer.parseRequestParameters(requestBody);
-                ObjectiveTrooper objectiveTrooper = new ObjectiveTrooper();
+                Trooper trooper = new Trooper();
 
-                String name = URLDecoder.decode(requestParameters.get("memberName"));
+                String name = URLDecoder.decode(requestParameters.get("name"));
                 String email = URLDecoder.decode(requestParameters.get("email"));
+                String role = URLDecoder.decode(requestParameters.get("role"));
 
-                objectiveTrooper.setName(name);
-                objectiveTrooper.setEmail(email);
+                trooper.setName(name);
+                trooper.setEmail(email);
 
-                trooperDao.insert(objectiveTrooper);
+                trooperDao.insert(trooper);
 
                 //Respond
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +
-                        "Location: http://localhost:8080\r\n" +
+                        "Location: http://localhost:8080/newWorker.html\r\n" +
                         "Connection: close\r\n" +
                         "\r\n").getBytes());
                 return;
@@ -46,7 +50,7 @@ public class ObjectiveTrooperHttpController implements HttpController {
             String statusCode = "200";
             String location = requestParameters.get("location");
             String body = getBody();
-            //requestParameters.getOrDefault("body", getBody());
+                    //requestParameters.getOrDefault("body", getBody());
 
             outputStream.write(("HTTP/1.1 " + statusCode + " OK\r\n" +
                     "Content-length: " + body.length() + "\r\n" +

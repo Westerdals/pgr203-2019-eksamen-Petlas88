@@ -1,7 +1,5 @@
 package no.kristiania.eksamen2019.DAO;
 
-import no.kristiania.eksamen2019.ObjectiveStatus;
-import no.kristiania.eksamen2019.ObjectiveStatusDao;
 import org.assertj.core.api.AssertionsForClassTypes;
 import org.flywaydb.core.Flyway;
 import org.h2.jdbcx.JdbcDataSource;

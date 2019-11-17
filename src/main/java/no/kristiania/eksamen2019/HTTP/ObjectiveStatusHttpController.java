@@ -1,6 +1,9 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.HTTP;
 
 
+import no.kristiania.eksamen2019.DAO.ObjectiveStatus;
+import no.kristiania.eksamen2019.DAO.ObjectiveStatusDao;
+import no.kristiania.eksamen2019.Server.HttpServer;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;

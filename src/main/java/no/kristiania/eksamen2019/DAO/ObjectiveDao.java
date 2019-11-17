@@ -1,4 +1,4 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.DAO;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

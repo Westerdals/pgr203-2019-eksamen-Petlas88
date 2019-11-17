@@ -1,4 +1,4 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.DAO;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class OperationDao extends AbstractDao<Operation>{
+public class OperationDao extends AbstractDao<Operation> {
     public OperationDao(DataSource dataSource) {
         super(dataSource);
     }

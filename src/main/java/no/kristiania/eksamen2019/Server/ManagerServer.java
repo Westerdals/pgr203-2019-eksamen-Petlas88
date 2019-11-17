@@ -1,5 +1,11 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.Server;
 
+import no.kristiania.eksamen2019.DAO.ObjectiveDao;
+import no.kristiania.eksamen2019.DAO.ObjectiveStatusDao;
+import no.kristiania.eksamen2019.DAO.TrooperDao;
+import no.kristiania.eksamen2019.HTTP.ObjectiveHttpController;
+import no.kristiania.eksamen2019.HTTP.ObjectiveStatusHttpController;
+import no.kristiania.eksamen2019.HTTP.TrooperHttpController;
 import org.flywaydb.core.Flyway;
 import org.postgresql.ds.PGSimpleDataSource;
 

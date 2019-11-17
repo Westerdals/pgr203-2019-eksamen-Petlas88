@@ -1,7 +1,5 @@
 package no.kristiania.eksamen2019.DAO;
 
-import no.kristiania.eksamen2019.Objective;
-import no.kristiania.eksamen2019.ObjectiveDao;
 import org.flywaydb.core.Flyway;
 import org.h2.jdbcx.JdbcDataSource;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,17 +1,18 @@
-package no.kristiania.eksamen2019;
+package no.kristiania.eksamen2019.DAO;
 
 import java.util.Objects;
 
-public class ObjectiveTrooper {
+public class Trooper {
+
 
     private long id;
     private String name;
     private String email;
+    private String role;
 
     public long getId() {
         return id;
     }
-
 
     public void setId(long id) {
         this.id = id;
@@ -33,13 +34,25 @@ public class ObjectiveTrooper {
         this.email = email;
     }
 
-
-    public ObjectiveTrooper() {
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public ObjectiveTrooper(String name, String email) {
+    public String getRole() {
+        return role;
+    }
+
+
+
+    public Trooper() {
+
+
+    }
+
+    public Trooper(String name, String email, String role) {
         this.name = name;
         this.email = email;
+        this.role = role;
 
     }
 
@@ -48,23 +61,25 @@ public class ObjectiveTrooper {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ObjectiveTrooper trooper = (ObjectiveTrooper) o;
+        Trooper trooper = (Trooper) o;
         return id == trooper.id &&
                 Objects.equals(name, trooper.name) &&
-                Objects.equals(email, trooper.email);
+                Objects.equals(email, trooper.email) &&
+                Objects.equals(role, trooper.role);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email);
+        return Objects.hash(id, name, email, role);
     }
 
     @Override
     public String toString() {
-        return "ObjectiveTrooper{" +
+        return "Trooper{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }
