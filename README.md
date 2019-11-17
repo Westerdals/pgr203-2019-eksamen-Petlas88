@@ -6,9 +6,9 @@ NB! Noen av sidene inneholder lyd, så vær obs med volumet!
 
 Vi ville prøve å gjøre denne oppgaven litt morsommere for både oss som har jobbet med den, og dere som skal rette den. Vi har derfor satt den opp i et Star Wars tema, med noen (forhåpentligvis) morsomme elementer. Dette temaet fører naturligvis til en del navngivning som ikke helt følger normalen, vi vil derfor klaregjøre litt. Under vil vi liste opp klassenavn, de til venstre er slik de er i oppgaven, og de til høyre er slik man gjerne ser dem ellers.
 
-Trooper = Worker, altså arbeidere som kan opprettees
-Objective = Task, altså en underoppgave i prosjektet (Operation)
-ObjectiveStatus = TaskStatus, dette er statuser man kan sette til Objectives
+*Trooper = Worker, altså arbeidere som kan opprettees
+*Objective = Task, altså en underoppgave i prosjektet (Operation)
+*ObjectiveStatus = TaskStatus, dette er statuser man kan sette til Objectives
 
 Vi har selvfølgelig flere klasser, men disse "prefixene" vil følge over til klassene som er relatert til disse.
 
