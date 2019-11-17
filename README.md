@@ -4,7 +4,7 @@
 
 NB! Noen av sidene inneholder lyd, så vær obs med volumet!
 
-Vi ville prøve å gjøre denne oppgaven litt morsommere for både oss som har jobbet med den, og dere som skal rette den. Vi har derfor satt den opp i et Star Wars tema, med noen (forhåpentligvis) morsomme elementer. Dette temaet fører naturligvis til en del navngivning som ikke helt følger normalen, vi vil derfor klaregjøre litt. Under vil vi liste opp klassenavn, de til venstre er slik de er i oppgaven, og de til høyre er slik man gjerne ser dem ellers.
+Vi ville prøve å gjøre denne oppgaven litt morsommere for både oss som har jobbet med den, og dere som skal rette den. Vi har derfor satt den opp i et Star Wars tema, med noen (forhåpentligvis) morsomme elementer. Vi forhørte oss på forhånd med foreleser for sikkerhets skyld og har ungått at dette skal forvirre en eventuell ekstern sensor. Dette temaet fører naturligvis til en del navngivning som ikke helt følger normalen, vi vil derfor klaregjøre litt. Under vil vi liste opp klassenavn, de til venstre er slik de er i oppgaven, og de til høyre er slik man gjerne ser dem ellers.
 
 1.Trooper = Worker, altså arbeidere som kan opprettees
 
@@ -38,9 +38,21 @@ Vi ønsker å understreke at selvom frontend delen her er litt opparbeidet, så 
 
 ## Designbeskrivelse
 
-Her kan dere inkludere et diagram av datamodellen og av de viktigste klassene i programmet.
+Vi har delt opp løsningen i tre: Http, Dao og Server for å få en mer oversiktlig struktur slik UML diagrammene under viser.
 
-Beskrivelse av hvordan en habil ny utvikler som ser prosjektet for første gang bør forholde seg til koden deres.
+### UML Http:
+
+![](docs/httpUML.PNG)
+
+### UML Dao:
+
+![](docs/daoUML.PNG)
+
+### UML Server:
+
+![](docs/serverUML.PNG)
+
+
 
 ## Egenevaluering
 
