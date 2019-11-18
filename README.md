@@ -57,7 +57,7 @@ Vi har delt opp løsningen i tre: Http, Dao og Server for å få en mer oversikt
 ## Egenevaluering
 
 ### Hva vi lærte underveis
-Vi har lært mye av prinsippene rundt HTTP og JDBC. Denne oppgaven har på mange måter lagt veien for videre læring. Vi har også lært veldig mye om det å feilsøke kode, da vi underveis har møtt på mange utfordringer. Mest av alt har vi lært at ting tar veldig mye lengre tid enn man først ser for seg, og vi burde nok ha startet tidligere, men da vi har hatt andre eksamener ble det litt feilprioritert.
+Vi har lært mye av prinsippene rundt HTTP og JDBC. Denne oppgaven har på mange måter lagt veien for videre læring. Vi har også lært veldig mye om det å feilsøke kode, da vi underveis har møtt på mange utfordringer. Kurset introduserte hos tidlig til det å parprogrammere som har vært vitalt for å gjennomføre prosjektet. Her er lenke til video fra tidligere innlevering under kurset som demonstrerer parprogrammering i praksis: https://www.youtube.com/watch?v=ArL2xoboJNU&t=98s . Mest av alt har vi lært at ting tar veldig mye lengre tid enn man først ser for seg, og vi burde nok ha startet tidligere, men da vi har hatt andre eksamener ble det litt feilprioritert.
 ### Hva vi fikk til bra i koden vår
 Vi føler at vi har fått til mer enn vi i utgangspunktet trodde vi skulle gjøre, og har gått litt utover minimumskravet. Vi føler at strukturen er jevnt over ganske bra og følger de konvensjonene vi har lært i ganske stor grad. Føler vi har oppnådd det å få en tilstrekkelig forståelse av konseptene som tillater oss å ekspandere litt på koden.
 ### Hva vi skulle ønske vi hadde gjort annerledes
