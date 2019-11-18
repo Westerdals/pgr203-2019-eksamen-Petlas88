@@ -4,7 +4,7 @@
 
 NB! Noen av sidene inneholder lyd, så vær obs med volumet!
 
-Vi ville prøve å gjøre denne oppgaven litt morsommere for både oss som har jobbet med den, og dere som skal rette den. Vi har derfor satt den opp i et Star Wars tema, med noen (forhåpentligvis) morsomme elementer. Dette temaet fører naturligvis til en del navngivning som ikke helt følger normalen, vi vil derfor klaregjøre litt. Under vil vi liste opp klassenavn, de til venstre er slik de er i oppgaven, og de til høyre er slik man gjerne ser dem ellers.
+Vi ville prøve å gjøre denne oppgaven litt morsommere for både oss som har jobbet med den, og dere som skal rette den. Vi har derfor satt den opp i et Star Wars tema, med noen (forhåpentligvis) morsomme elementer. Vi forhørte oss på forhånd med foreleser for sikkerhets skyld og har ungått at dette skal forvirre en eventuell ekstern sensor. Dette temaet fører naturligvis til en del navngivning som ikke helt følger normalen, vi vil derfor klaregjøre litt. Under vil vi liste opp klassenavn, de til venstre er slik de er i oppgaven, og de til høyre er slik man gjerne ser dem ellers.
 
 1.Trooper = Worker, altså arbeidere som kan opprettees
 
@@ -38,14 +38,26 @@ Vi ønsker å understreke at selvom frontend delen her er litt opparbeidet, så 
 
 ## Designbeskrivelse
 
-Her kan dere inkludere et diagram av datamodellen og av de viktigste klassene i programmet.
+Vi har delt opp løsningen i tre: Http, Dao og Server for å få en mer oversiktlig struktur slik UML diagrammene under viser.
 
-Beskrivelse av hvordan en habil ny utvikler som ser prosjektet for første gang bør forholde seg til koden deres.
+### UML Http:
+
+![](docs/httpUML.PNG)
+
+### UML Dao:
+
+![](docs/daoUML.PNG)
+
+### UML Server:
+
+![](docs/serverUML.PNG)
+
+
 
 ## Egenevaluering
 
 ### Hva vi lærte underveis
-Vi har lært mye av prinsippene rundt HTTP og JDBC. Denne oppgaven har på mange måter lagt veien for videre læring. Vi har også lært veldig mye om det å feilsøke kode, da vi underveis har møtt på mange utfordringer. Mest av alt har vi lært at ting tar veldig mye lengre tid enn man først ser for seg, og vi burde nok ha startet tidligere, men da vi har hatt andre eksamener ble det litt feilprioritert.
+Vi har lært mye av prinsippene rundt HTTP og JDBC. Denne oppgaven har på mange måter lagt veien for videre læring. Vi har også lært veldig mye om det å feilsøke kode, da vi underveis har møtt på mange utfordringer. Kurset introduserte hos tidlig til det å parprogrammere som har vært vitalt for å gjennomføre prosjektet. Her er lenke til video fra tidligere innlevering under kurset som demonstrerer parprogrammering i praksis: https://www.youtube.com/watch?v=ArL2xoboJNU&t=98s . Mest av alt har vi lært at ting tar veldig mye lengre tid enn man først ser for seg, og vi burde nok ha startet tidligere, men da vi har hatt andre eksamener ble det litt feilprioritert.
 ### Hva vi fikk til bra i koden vår
 Vi føler at vi har fått til mer enn vi i utgangspunktet trodde vi skulle gjøre, og har gått litt utover minimumskravet. Vi føler at strukturen er jevnt over ganske bra og følger de konvensjonene vi har lært i ganske stor grad. Føler vi har oppnådd det å få en tilstrekkelig forståelse av konseptene som tillater oss å ekspandere litt på koden.
 ### Hva vi skulle ønske vi hadde gjort annerledes
@@ -53,3 +65,5 @@ Som nevnt over skulle vi ha begynt ha tidligere. Vi har underveis møtt på en d
 ## Evaluering fra annen gruppe
 
 ## Evaluering gitt til annen gruppe
+
+Lenke til issues gitt til andre gruppe:  https://github.com/Westerdals/pgr203-2019-eksamen-Lazboy87/issues
