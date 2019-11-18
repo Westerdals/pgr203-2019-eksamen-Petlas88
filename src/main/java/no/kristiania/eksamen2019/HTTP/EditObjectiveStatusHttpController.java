@@ -28,7 +28,7 @@ public class EditObjectiveStatusHttpController implements HttpController {
                 requestParameters = HttpServer.parseRequestParameters(requestBody);
 
                 String statusName = requestParameters.get("statusName");
-                int objectiveId = Integer.parseInt(requestParameters.get("objectiveId"));
+                long objectiveId = Integer.parseInt(requestParameters.get("objectiveId"));
 
 
                 objectiveDao.changeStatus(statusName, objectiveId);
