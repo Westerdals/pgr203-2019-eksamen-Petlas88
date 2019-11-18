@@ -2,6 +2,8 @@
 
 # PG203 Mappeinnlevering for gruppe 123
 
+Link til Github Repository - https://github.com/Westerdals/pgr203-2019-eksamen-Petlas88
+
 NB! Noen av sidene inneholder lyd, så vær obs med volumet!
 
 Vi ville prøve å gjøre denne oppgaven litt morsommere for både oss som har jobbet med den, og dere som skal rette den. Vi har derfor satt den opp i et Star Wars tema, med noen (forhåpentligvis) morsomme elementer. Vi forhørte oss på forhånd med foreleser for sikkerhets skyld og har ungått at dette skal forvirre en eventuell ekstern sensor. Dette temaet fører naturligvis til en del navngivning som ikke helt følger normalen, vi vil derfor klaregjøre litt. Under vil vi liste opp klassenavn, de til venstre er slik de er i oppgaven, og de til høyre er slik man gjerne ser dem ellers.
@@ -16,7 +18,8 @@ Vi har selvfølgelig flere klasser, men disse "prefixene" vil følge over til kl
 
 Vi ønsker å understreke at selvom frontend delen her er litt opparbeidet, så er dette ikke noe vi har valgt over det å utføre oppgaven, men gjort i de tidsrommene vi har vært så slitne og fraværende at vi ikke lenger klarte å tenke for mye på mer avansert kode.
 
- 
+Arbeidet startet i en separat repository for å unngå og teste at unødvendige filer ikke ble tatt med i den endelige eksamens repositorien da vi har hatt problemer med dette tidligere. Da test prosjektet virket å fungere som det skulle ble den importert i den endelige eksamens repositoriet og arbeidet fortsatte her. Link til denne test repositorien er: https://github.com/Martinius222/death_star
+   
 
 ## Hvordan kjøre dette programmet
 
@@ -65,7 +68,6 @@ Vi føler at vi har fått til mer enn vi i utgangspunktet trodde vi skulle gjør
 ### Hva vi skulle ønske vi hadde gjort annerledes
 Som nevnt over skulle vi ha begynt ha tidligere. Vi har underveis møtt på en del utfordringer, og når man er presset på tid fører dette til stress og sene kvelder. Konklusjonen er at vi skulle ha planlagt bedre i forkant av prosjektet. 
 ## Evaluering fra annen gruppe
-
+Lenke til issues gitt av andre gruppen:   https://github.com/Westerdals/pgr203-2019-eksamen-Petlas88/issues
 ## Evaluering gitt til annen gruppe
-
-Lenke til issues gitt til andre gruppe:  https://github.com/Westerdals/pgr203-2019-eksamen-Lazboy87/issues
+Lenke til issues gitt til andre gruppen:  https://github.com/Westerdals/pgr203-2019-eksamen-Lazboy87/issues
