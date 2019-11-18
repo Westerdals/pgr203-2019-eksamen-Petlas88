@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pgr203-2019-eksamen-Petlas88" />
+        <module name="task-manager-exam" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="pgr203-2019-eksamen-Petlas88" target="11" />
+      <module name="task-manager-exam" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

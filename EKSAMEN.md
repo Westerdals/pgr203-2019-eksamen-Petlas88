@@ -127,21 +127,21 @@ body {
 
 ### README.md
 
-* [x] `README.md` inneholder en korrekt link til Travis CI
+* [ ] `README.md` inneholder en korrekt link til Travis CI
 * [ ] `README.md` beskriver prosjektets funksjonalitet, hvordan man bygger det og hvordan man kjører det 
 * [ ] `README.md` beskriver eventuell ekstra leveranse utover minimum
-* [x] `README.md` inneholder link til en diagram som viser datamodellen
+* [ ] `README.md` inneholder link til en diagram som viser datamodellen
 * [x] Dere har gitt minst 2 positive og 2 korrektive GitHub issues til en annen gruppe og inkluderer link til disse fra README.md
 
 ### Koden
 
-* [x] `mvn package` bygger en executable jar-fil
-* [x] Koden inneholder et godt sett med tester
-* [x] `java -jar target/...jar` (etter `mvn package`) lar bruker legge til å liste ut data fra databasen
-* [x] Programmet leser `dataSource.url`, `dataSource.username` og `dataSource.password` fra `task-manager.properties` for å connecte til databasen
+* [ ] `mvn package` bygger en executable jar-fil
+* [ ] Koden inneholder et godt sett med tester
+* [ ] `java -jar target/...jar` (etter `mvn package`) lar bruker legge til å liste ut data fra databasen
+* [ ] Programmet leser `dataSource.url`, `dataSource.username` og `dataSource.password` fra `task-manager.properties` for å connecte til databasen
 * [x] Programmet bruker Flywaydb for å sette opp databaseskjema
-* [x] Server skriver nyttige loggmeldinger, inkludert informasjon om hvilken URL den kjører på ved oppstart
-* [x] `.gitignore` inneholder nødvendige filer
+* [ ] Server skriver nyttige loggmeldinger, inkludert informasjon om hvilken URL den kjører på ved oppstart
+* [ ] `.gitignore` inneholder nødvendige filer
 
 ### Funksjonalitet
 
@@ -155,9 +155,9 @@ body {
 * [x] Avansert datamodell (mer enn 3 tabeller)
 * [ ] Avansert funksjonalitet (redigering av prosjektmedlemmer, statuskategorier, prosjekter)
 * [ ] Implementasjon av cookies for å konstruere sesjoner
-* [x] UML diagram som dokumenterer datamodell og/eller arkitektur (presentert i README.md)
+* [ ] UML diagram som dokumenterer datamodell og/eller arkitektur (presentert i README.md)
 * [x] Rammeverk rundt Http-håndtering (en god HttpMessage class med HttpRequest og HttpResponse subtyper) som gjenspeiler RFC7230
 * [x] Korrekt håndtering av norske tegn i HTTP
 * [x] God bruk av DAO-pattern
-* [x] Link til video med god demonstrasjon av ping-pong programmering
+* [ ] Link til video med god demonstrasjon av ping-pong programmering
 * [ ] Annet

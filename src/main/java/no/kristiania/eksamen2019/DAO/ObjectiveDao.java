@@ -54,10 +54,4 @@ public class ObjectiveDao extends AbstractDao<Objective> {
             }
         }
     }
-
-    public void changeStatus(String statusName, long objectiveId) throws SQLException{
-        Objective objective = new Objective();
-
-        insert(objective, "update objectives set status =" + statusName + "where id = " + objectiveId);
-    }
 }

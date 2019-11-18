@@ -38,12 +38,12 @@ public class ListObjectiveTroopersHttpController implements HttpController {
             String location = requestParameters.get("location");
             String body = requestParameters.getOrDefault("body", getBody());
 
-            outputStream.write(("HTTP/1.1 302 Redirect\r\n" +
-                    "Location: http://localhost:8080/ListObjectiveTroopers.html\r\n" +
-                    "Connection: close\r\n" +
-                    "\r\n").getBytes());
-            return;
+            outputStream.write(("HTTP/1.0 " + statusCode + " OK\r\n" +
 
+                    "Content-length: " + body.length() + "\r\n" +
+                    (location != null ? "Location: " + location + "\r\n" : "") +
+                    "\r\n" +
+                    body).getBytes());
         } catch (SQLException e) {
             Logger.error("While handling request{}", requestPath, e);
             String message = e.toString();
