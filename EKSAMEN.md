@@ -160,4 +160,4 @@ body {
 * [x] Korrekt håndtering av norske tegn i HTTP
 * [x] God bruk av DAO-pattern
 * [x] Link til video med god demonstrasjon av ping-pong programmering
-* [ ] Annet
+* [x] Annet
