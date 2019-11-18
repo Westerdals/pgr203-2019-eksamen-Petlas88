@@ -27,14 +27,16 @@ Vi ønsker å understreke at selvom frontend delen her er litt opparbeidet, så 
 
 ### Funksjonalitet
 
-1. Start programmet via .jar
-2. Løsningen kan aksesseres i browser via localhost:8080
-3. 
-4. Eksempel
-5. På
-6. Bruk
-7. Av
-8. Programmet
+1. Start programmet via .jar som beskrevet over.
+2. Løsningen kan aksesseres i browser via localhost:8080/index.html
+3. Brukeren trykker "Add or List Members" for å legge til nye brukere (troopers) og se registrerte brukere.
+4. Brukere trykker "Add new status" for å legge til nye statuser for tasks.
+5. Brukeren trykker "Add or List Objectives" for å legge til nye tasks (objectives) og se registrerte tasks.
+6. Brukeren trykker "Add Trooper to Objective" for å tilegne bruker til task (trooper til objective). 
+Dette gjøres ved å legge inn IDen til bruker og task, som man kan finne i listen av hver.
+7. Brukeren trykker "List Troopers Assigned to Objectives" for å se listen av brukere som er tilegnet hver task.
+8. "Edit Objective Status" skal gjøre det mulig å endre status på tasks, men er per dags dato ikke implementert grunnet bug forårsaket 
+av NullPointerException
 
 ## Designbeskrivelse
 
