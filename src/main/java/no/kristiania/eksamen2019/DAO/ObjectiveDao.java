@@ -17,7 +17,6 @@ public class ObjectiveDao extends AbstractDao<Objective> {
         statement.setString(1, operationObjective.getName());
         statement.setString(2, operationObjective.getDescription());
         statement.setString(3, operationObjective.getStatus());
-
     }
 
     @Override
@@ -53,5 +52,11 @@ public class ObjectiveDao extends AbstractDao<Objective> {
                 }
             }
         }
+    }
+
+    public void changeStatus(String statusName, int objectiveId) throws SQLException {
+        Objective objective = new Objective();
+
+        insert(objective, "update objectives set status =" + statusName + "where id =" + objectiveId);
     }
 }

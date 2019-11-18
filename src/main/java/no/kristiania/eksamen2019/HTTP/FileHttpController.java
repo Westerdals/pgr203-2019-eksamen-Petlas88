@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Map;
 
-public class FileHttpController implements HttpController {
+public class  FileHttpController implements HttpController {
     private HttpServer httpServer;
 
     public FileHttpController(HttpServer httpServer) {
