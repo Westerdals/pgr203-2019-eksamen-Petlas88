@@ -26,13 +26,12 @@ public class EditObjectiveStatusHttpController implements HttpController {
         try {
             if (requestAction.equalsIgnoreCase("POST")) {
                 requestParameters = HttpServer.parseRequestParameters(requestBody);
-                Objective objective = new Objective();
 
-                long statusId = Long.parseLong(requestParameters.get("statusName"));
-                long objectiveId = Long.parseLong(requestParameters.get("objectiveName"));
+                String statusName = requestParameters.get("statusName");
+                long objectiveId = Integer.parseInt(requestParameters.get("objectiveId"));
 
 
-                objectiveDao.insert(objective);
+                objectiveDao.changeStatus(statusName, objectiveId);
 
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +
                         "Location: http://localhost:8080/editObjectiveStatus\r\n" +
